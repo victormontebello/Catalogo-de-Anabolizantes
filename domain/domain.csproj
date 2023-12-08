@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Validate\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentMigrator" Version="3.3.2" />
+    <PackageReference Include="FluentMigrator.Runner.SqlServer" Version="3.3.2" />
+    <PackageReference Include="FluentValidation" Version="11.8.1" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
