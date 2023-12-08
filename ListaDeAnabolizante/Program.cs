@@ -32,7 +32,7 @@ namespace ListaDeAnabolizante.Forms
                 .AddFluentMigratorCore()
                 .ConfigureRunner(rb => rb
                     .AddSqlServer()
-                    .WithGlobalConnectionString(ConfigurationManager.ConnectionStrings["ComputadoresDB"].ConnectionString)
+                    .WithGlobalConnectionString(ConfigurationManager.ConnectionStrings["BombasDB"].ConnectionString)
                     .ScanIn(typeof(MigracaoTabelaAnabolizantes).Assembly).For.Migrations())
                 .AddLogging(lb => lb.AddFluentMigratorConsole())
                 .BuildServiceProvider(false);
