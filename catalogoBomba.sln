@@ -3,11 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaDeAnabolizante", "ListaDeAnabolizante\ListaDeAnabolizante.csproj", "{6441385C-9173-43B4-A529-B5C9444D687C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListaDeAnabolizante", "ListaDeAnabolizante\ListaDeAnabolizante.csproj", "{6441385C-9173-43B4-A529-B5C9444D687C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{087776A5-CA2C-4F1F-B5DB-F8412F67022F} = {087776A5-CA2C-4F1F-B5DB-F8412F67022F}
+		{FE73290A-A9BF-4387-B2E7-7491FC9F32DF} = {FE73290A-A9BF-4387-B2E7-7491FC9F32DF}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "domain", "domain\domain.csproj", "{087776A5-CA2C-4F1F-B5DB-F8412F67022F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "domain", "domain\domain.csproj", "{087776A5-CA2C-4F1F-B5DB-F8412F67022F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestrutura", "Infraestrutura\Infraestrutura.csproj", "{FE73290A-A9BF-4387-B2E7-7491FC9F32DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestrutura", "Infraestrutura\Infraestrutura.csproj", "{FE73290A-A9BF-4387-B2E7-7491FC9F32DF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{087776A5-CA2C-4F1F-B5DB-F8412F67022F} = {087776A5-CA2C-4F1F-B5DB-F8412F67022F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
