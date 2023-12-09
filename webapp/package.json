@@ -1,0 +1,11 @@
+{
+  "name": "ui5.anabolizantes",
+  "version": "1.0.0",
+  "description": "api para as bomba",
+  "scripts": {
+    "start": "ui5 serve -o index.html"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^3.7.3"
+  }
+}
