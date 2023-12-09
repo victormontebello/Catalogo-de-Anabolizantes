@@ -2,7 +2,7 @@
 
 namespace Infraestrutura.Migracoes
 {
-    [Migration(20231120104200)]
+    [Migration(20231108085100)]
     public class MigracaoTabelaAnabolizantes : Migration
     {
         public override void Up()
@@ -12,7 +12,8 @@ namespace Infraestrutura.Migracoes
                 .WithColumn("Nome").AsString().NotNullable()
                 .WithColumn("Preco").AsDouble().NotNullable()
                 .WithColumn("Composicao").AsString().NotNullable()
-                .WithColumn("Vencimento").AsDateTime().NotNullable();
+                .WithColumn("Vencimento").AsDateTime().NotNullable()
+                .WithColumn("Injetavel").AsBoolean().Nullable();
         }
 
         public override void Down()

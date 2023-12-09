@@ -56,6 +56,7 @@ namespace Infraestrutura.Repositorios
                         bomba.Preco = (double)dr["Preco"];
                         bomba.Vencimento = (DateTime)dr["Vencimento"];
                         bomba.Composicao = Enum.Parse<TipoBase>((dr["Composicao"].ToString()));
+                        bomba.Injetavel = (bool)dr["Injetavel"];
                         listaDeAnabolizantes.Add(bomba);
                     }
                 }
@@ -89,6 +90,7 @@ namespace Infraestrutura.Repositorios
                             bomba.Preco = (double)reader["Preco"];
                             bomba.Vencimento = (DateTime)reader["Vencimento"];
                             bomba.Composicao = Enum.Parse<TipoBase>((reader["Composicao"].ToString()));
+                            bomba.Injetavel = (bool)reader["Injetavel"];
                         }
                     }
                 }
@@ -109,7 +111,7 @@ namespace Infraestrutura.Repositorios
                 {
                     conexao.Open();
 
-                    var sqlQuery = "INSERT INTO Anabolizantes (Nome, Preco, Vencimento, Composicao) VALUES  (@Nome, @Preco, @Vencimento, @Composicao)";
+                    var sqlQuery = "INSERT INTO Anabolizantes (Nome, Preco, Vencimento, Composicao, Injetavel) VALUES  (@Nome, @Preco, @Vencimento, @Composicao, @Injetavel)";
 
                     using (SqlCommand comandoSQL = new SqlCommand(sqlQuery, conexao))
                     {
@@ -117,6 +119,7 @@ namespace Infraestrutura.Repositorios
                         comandoSQL.Parameters.AddWithValue("@Preco", al.Preco);
                         comandoSQL.Parameters.AddWithValue("@Vencimento", al.Vencimento);
                         comandoSQL.Parameters.AddWithValue("@Composicao", al.Composicao.ToString());
+                        comandoSQL.Parameters.AddWithValue("@Injetavel", al.Injetavel);
                         comandoSQL.ExecuteReader();
                     }
                 }
@@ -135,7 +138,7 @@ namespace Infraestrutura.Repositorios
                 {
                     conexao.Open();
 
-                    var sqlQuery = "UPDATE Anabolizantes SET Nome = @Nome, Preco = @Preco, Composicao = @Composicao, Vencimento = @Vencimento WHERE Id = @id";
+                    var sqlQuery = "UPDATE Anabolizantes SET Nome = @Nome, Preco = @Preco, Composicao = @Composicao, Vencimento = @Vencimento, Injetavel = @Injetavel WHERE Id = @id";
 
                     using (SqlCommand comandoSQL = new SqlCommand(sqlQuery, conexao))
                     {
@@ -144,6 +147,7 @@ namespace Infraestrutura.Repositorios
                         comandoSQL.Parameters.AddWithValue("@Preco", al.Preco);
                         comandoSQL.Parameters.AddWithValue("@Vencimento", al.Vencimento);
                         comandoSQL.Parameters.AddWithValue("@Composicao", al.Composicao.ToString());
+                        comandoSQL.Parameters.AddWithValue("@Injetavel", al.Injetavel);
                         comandoSQL.ExecuteNonQuery();
                     }
                 }
