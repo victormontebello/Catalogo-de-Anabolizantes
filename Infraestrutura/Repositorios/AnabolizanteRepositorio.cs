@@ -107,7 +107,7 @@ namespace Infraestrutura.Repositorios
         {
             try
             {
-                using (SqlConnection conexao = new SqlConnection(ConfigurationManager.ConnectionStrings["ComputadoresDB"].ConnectionString))
+                using (SqlConnection conexao = new SqlConnection(ConfigurationManager.ConnectionStrings["BombasDB"].ConnectionString))
                 {
                     conexao.Open();
 
@@ -134,7 +134,7 @@ namespace Infraestrutura.Repositorios
         {
             try
             {
-                using (SqlConnection conexao = new SqlConnection(ConfigurationManager.ConnectionStrings["ComputadoresDB"].ConnectionString))
+                using (SqlConnection conexao = new SqlConnection(ConfigurationManager.ConnectionStrings["BombasDB"].ConnectionString))
                 {
                     conexao.Open();
 
