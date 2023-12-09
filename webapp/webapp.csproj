@@ -22,12 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\i18n\" />
-    <Folder Include="wwwroot\controller\" />
+    <None Include="app.config" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="app.config" />
+    <Folder Include="wwwroot\Servicos\" />
   </ItemGroup>
 
 </Project>

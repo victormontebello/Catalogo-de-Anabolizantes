@@ -10,6 +10,12 @@
       "version": "1.0.0"
     }
   },
+  "dataSources": {
+    "mainService": {
+      "uri": "https://localhost:7208/api/Anabolizantes",
+      "type": "JSON"
+    }
+  },
   "sap.ui": {
     "technology": "UI5",
     "deviceTypes": {
