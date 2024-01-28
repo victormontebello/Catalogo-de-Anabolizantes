@@ -10,12 +10,6 @@
       "version": "1.0.0"
     }
   },
-  "dataSources": {
-    "mainService": {
-      "uri": "https://localhost:7208/api/Anabolizantes",
-      "type": "JSON"
-    }
-  },
   "sap.ui": {
     "technology": "UI5",
     "deviceTypes": {
@@ -25,6 +19,7 @@
     }
   },
   "sap.ui5": {
+
     "rootView": {
       "viewName": "ui5.anabolizantes.view.ListaDeBomba",
       "type": "XML",
@@ -61,21 +56,12 @@
           "pattern": "",
           "name": "listaDeBomba",
           "target": "listaDeBomba"
-        },
-        {
-          "pattern": "detalhe/{id}",
-          "name": "detalhe",
-          "target": "detalhe"
         }
       ],
       "targets": {
         "listaDeBomba": {
           "id": "listaDeBomba",
           "name": "ListaDeBomba"
-        },
-        "detalhe": {
-          "id": "detalhe",
-          "name": "Detalhe"
         }
       }
     }

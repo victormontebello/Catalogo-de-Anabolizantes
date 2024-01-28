@@ -8,7 +8,7 @@
 		<App id="app">
 			<Page title="{i18n>tituloPaginaListagem}" titleAlignment="Center">
 				<content>
-					<Table id="listaDeBomba" items="{/bombas}">
+					<Table id="listaDeBomba" items="{path: 'modeloDeBomba>/'}">
 						<headerToolbar>
 							<Toolbar>
 								<SearchField placeholder="Pesquisar Anabolizante" search="filtrarAnabolizante" />
@@ -36,10 +36,10 @@
 						<items>
 							<ColumnListItem type="Navigation" press=".aoClicarNoCliente">
 								<cells>
-									<Text text="{nome}" />
-									<Text text="{composicao}" />
-									<Text text="{injetavel}" />
-									<Text text="{path: 'vencimento',
+									<Text text="{modeloDeBombas>nome}" />
+									<Text text="{modeloDeBombas>composicao}" />
+									<Text text="{modeloDeBombas>injetavel}" />
+									<Text text="{path: 'modeloDeBombas>vencimento',
 												 type: 'sap.ui.model.type.Date',
 												 formatOptions: {
 												 style: 'short',
